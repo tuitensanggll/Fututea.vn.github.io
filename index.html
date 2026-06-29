@@ -762,14 +762,14 @@
 
     function getBotReply(msg) {
         const v = msg.toLowerCase();
-        if (v.match(/menu|món|thực đơn/))    return 'Menu gồm: Trà chanh tươi, Trà chanh thái, Trà đào cam sả, Trà oolong sữa, Trà xanh matcha, Nước ép dưa hấu 🍵';
-        if (v.match(/giá|bao nhiêu|price/))  return 'Trà chanh đồng giá 15k, các món khác từ 18k–30k. Xem menu phía trên nhé! 😊';
-        if (v.match(/giờ|mở cửa|open/))      return 'T2–T6: 08:00–22:00 | T7–CN: 09:00–23:00 🕖';
-        if (v.match(/địa chỉ|ở đâu|chỗ/))   return 'Chúng mình ở KDC Lê Phong, Biên Hòa, Đồng Nai 📍';
-        if (v.match(/phone|sđt|liên hệ/))    return 'Hotline: 0794 392 411 📞';
+        if (v.match(/menu|món|thực đơn/))    return 'Menu gồm: Trà chanh tươi, Trà chanh thái xanh, Trà chanh hạt chia,toping thêm 🍵';
+        if (v.match(/giá|bao nhiêu|price/))  return 'Trà chanh tươi 15k, các món khác từ 5k-17k. Xem menu phía trên nhé! 😊';
+        if (v.match(/giờ|mở cửa|open/))      return 'chúng mình mở bán các ngày trong tuần từ 08:00–24:00 🕖';
+        if (v.match(/địa chỉ|ở đâu|chỗ/))   return 'Chúng mình ở KDC.Lê Phong 1,KP.Đổng Tác, P.Tân Đông Hiệp, TP.HCM📍';
+        if (v.match(/phone|sđt|liên hệ/))    return 'Số Hotline: 0794 392 411 HOẶC 0975944623 📞';
         if (v.match(/sáng lập|founder|chủ/)) return 'Futu Tea được đồng sáng lập bởi 2 sinh viên Võ Thanh Sang và Trần Kim Hưng – thuộc FUTU GROUP 🏢';
-        if (v.match(/cảm ơn|thanks/))         return 'Không có chi! Rất vui được phục vụ bạn 😄';
-        if (v.match(/xin chào|hello|hi|chào/)) return 'Xin chào! Futu Rô Bô đây 🤖 Bạn cần gì không?';
+        if (v.match(/cảm ơn|thanks/))         return 'Không có chi! Rất vui được phục vụ bạn 😄 chúc bạn một ngày tốt lành';
+        if (v.match(/xin chào|hello|hi|chào/)) return 'Xin chào! Futu Rô Bô đây 🤖 Bạn mình giúp gì không?';
         return 'Futu Rô Bô còn đang học hỏi thêm 😅 hãy Thử hỏi: "menu", "giá", "giờ mở cửa" nhé!';
     }
 
