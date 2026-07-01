@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Năng Đánh Giá Sản Phẩm</title>
+    <link rel="stylesheet" href="rating.css">
+</head>
+<body>
+    <div class="rating-container">
+        <h2>Đánh Giá Sản Phẩm</h2>
+        
+        <!-- Hiển thị đánh giá hiện tại -->
+        <div class="rating-display">
+            <div class="stars-display" id="starsDisplay">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
+            <span class="rating-text" id="ratingText">Chưa có đánh giá</span>
+        </div>
+
+        <!-- Form đánh giá -->
+        <div class="rating-form">
+            <div class="form-group">
+                <label for="productRating">Chọn số sao:</label>
+                <div class="stars-input" id="starsInput">
+                    <span class="star-input" data-value="1">★</span>
+                    <span class="star-input" data-value="2">★</span>
+                    <span class="star-input" data-value="3">★</span>
+                    <span class="star-input" data-value="4">★</span>
+                    <span class="star-input" data-value="5">★</span>
+                </div>
+                <input type="hidden" id="selectedRating" value="0">
+            </div>
+
+            <div class="form-group">
+                <label for="reviewTitle">Tiêu đề nhận xét:</label>
+                <input 
+                    type="text" 
+                    id="reviewTitle" 
+                    placeholder="Ví dụ: Sản phẩm rất tốt"
+                    maxlength="100"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="reviewContent">Nội dung nhận xét:</label>
+                <textarea 
+                    id="reviewContent" 
+                    placeholder="Chia sẻ trải nghiệm của bạn với sản phẩm này..."
+                    rows="5"
+                    maxlength="500"
+                ></textarea>
+                <span class="char-count"><span id="charCount">0</span>/500</span>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" id="verifiedPurchase">
+                    <span>Tôi đã mua sản phẩm này</span>
+                </label>
+            </div>
+
+            <button id="submitReview" class="btn-submit">Gửi Đánh Giá</button>
+        </div>
+
+        <!-- Danh sách đánh giá -->
+        <div class="reviews-list">
+            <h3>Các Đánh Giá (<span id="reviewCount">0</span>)</h3>
+            <div id="reviewsContainer"></div>
+        </div>
+    </div>
+
+    <script src="rating.js"></script>
+</body>
+</html>
